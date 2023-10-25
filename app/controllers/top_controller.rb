@@ -11,6 +11,8 @@ class TopController < ApplicationController
     if params[:uid] == 'kindai' and params[:pass] = 'sanriko'
       session[:login_uid] = params[:uid]
       redirect_to top_main_path
+    else
+      render "error"
     end
   end
 end
